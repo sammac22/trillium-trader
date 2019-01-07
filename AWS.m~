@@ -1,0 +1,19 @@
+%This function takes the allTrades vector as input and returns a new one
+function newTrades = AWS(allTrades)
+%It loops through every trade in the vector.
+for i=1:length(allTrades)
+    %Boolean 
+    sold = 0;
+    bought = 0;
+    disp(allTrades(i).paramas.Action);
+    [sold, bought] = act(allTrades(i));
+    if sold == 1
+        allTrades(i) = [];
+    end
+    if bought == 1
+        disp('in change');
+        allTrades(i).paramas.Action = 'sell';
+    end
+end
+newTrades = allTrades;
+end
