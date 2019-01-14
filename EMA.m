@@ -8,7 +8,7 @@ totals = [];
 for i=1: length(highs)
     %statement does (high + low + close) / 3 and adds it to the totals
     %vector
-    totals = [totals,(highs(i) + lows(i) + close(i))/3];
+    totals = (totals,(highs + lows + close)/3);
 end
 
 %uses matlab function movavg to get the exponential moving average for each

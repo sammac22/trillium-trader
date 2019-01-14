@@ -4,7 +4,12 @@ classdef trade
     
     properties
         paramas         %Parameters for IBMatlab
-        movingAvg      %The moving average it is based on
+        movingAvg1      %The moving average it is based on
+        movingAvg2
+        barSize
+        hold
+        openPos
+        done        %Weather or not Trade has been Completed
     end
     
     methods
